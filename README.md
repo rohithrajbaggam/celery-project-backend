@@ -1,5 +1,5 @@
-# Celery
 
+## Celery Project Backend
 ## Celery Task Bulk Request
 
 - In Django, celery is a distributed task queue that allows you to run background processes or tasks asynchronously. It provides a way to offload time-consuming tasks from the main application flow.
@@ -63,3 +63,34 @@ Chrome -> ( Browser the Admin Panel )
 **Docker Container**
 
 **docker-compose.yaml**
+
+```docker
+version: "3.8"
+services:
+  celery_project_database:
+    image: postgres
+    restart: always
+
+    environment:
+      - POSTGRES_DB=celery_project
+      - POSTGRES_USER=celery_project
+      - POSTGRES_PASSWORD=celery_project@123
+    ports:
+      - 9050:5432
+#volumes:
+#     pgdata:
+```
+
+```python
+# Database Integration 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'celery_project',
+        'USER': 'celery_project',
+        'PASSWORD': 'celery_project@123',
+        'HOST': 'localhost',
+        'PORT': 9050,
+    }
+}
+```
