@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  celery_project_database:
+    image: postgres
+    restart: always
+
+    environment:
+      - POSTGRES_DB=celery_project
+      - POSTGRES_USER=celery_project
+      - POSTGRES_PASSWORD=celery_project@123
+    ports:
+      - 9050:5432
+#volumes:
+#     pgdata:
