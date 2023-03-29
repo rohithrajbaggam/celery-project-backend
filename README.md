@@ -10,7 +10,7 @@
 ```
 * Regular API's both Sync (HTTP) & Async (WSS) uses development server for performing
 	operations. 
-* While we wan to performing operation which deals with large amount of data and
+* While we want to performing operation which deals due to large amount of data and
 	which high data processing & large amount of time, if we run on this process in development
 	server it requires large amount time to perform and meanwhile we won't get response,
   due to high data processing server get crash.
