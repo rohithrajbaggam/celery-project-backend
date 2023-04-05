@@ -94,3 +94,11 @@ DATABASES = {
     }
 }
 ```
+# Commands to Start Server
+
+```python
+source venv/bin/activate
+python manage.py runserver
+docker compose up
+celery -A core worker --loglevel=info
+```

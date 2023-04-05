@@ -57,13 +57,13 @@ class sendMailTaskCeleryFunctionAPIView(views.APIView):
         return Response({"message" : f"Request sent Sending Bulk Mail"})
 
 
-class ReadJsonDataAPIView(views.APIView):
-    def post(self, request):
-        data = request.FILES["jsonfile"]
-        print(data)
-        try:
-            Jsondata = json.load(data)
-            print(Jsondata)
-        except Exception as e:
-            print(e)
-        return Response("ok")
+# class ReadJsonDataAPIView(views.APIView):
+#     def post(self, request):
+#         data = request.FILES["jsonfile"]
+#         print(data)
+#         try:
+#             Jsondata = json.load(data)
+#             print(Jsondata)
+#         except Exception as e:
+#             print(e)
+#         return Response("ok")

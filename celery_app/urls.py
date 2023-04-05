@@ -1,11 +1,11 @@
 from django.urls import path 
-from .views import UserDataModelAPIView, UserDataModelMultiThreadDataUploadAPIView, sendMailTaskCeleryFunctionAPIView, ReadJsonDataAPIView
+from .views import UserDataModelAPIView, sendMailTaskCeleryFunctionAPIView
 
 
 urlpatterns = [
     path("user-data-upload/", UserDataModelAPIView.as_view(), name="sendEmailCeleryAPIView"),
-    path("user-data-upload-multi-thread/", UserDataModelMultiThreadDataUploadAPIView.as_view(), name="UserDataModelMultiThreadDataUploadAPIView"),
+    # path("user-data-upload-multi-thread/", UserDataModelMultiThreadDataUploadAPIView.as_view(), name="UserDataModelMultiThreadDataUploadAPIView"),
     path("send-email-task-api/", sendMailTaskCeleryFunctionAPIView.as_view(), name="sendMailTaskCeleryFunctionAPIView"),
-    path("json-file/", ReadJsonDataAPIView.as_view(), name="ReadJsonDataAPIView"),
+    # path("json-file/", ReadJsonDataAPIView.as_view(), name="ReadJsonDataAPIView"),
 ]
 
